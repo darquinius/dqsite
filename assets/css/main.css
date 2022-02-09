@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-size: 19px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+h1,h2,h3 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+*,*:after,*:after {
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+header {
+    padding: 20px 20px;
+    float: left;
+    width: 100%;
+}
+header .logo {
+    float: left;
+}
+header nav {
+    float: left;
+    width: auto;
+    padding: 0 0 0 15px;
+}
+header nav ul {
+    list-style: none;
+    float:left;
+    padding: 0;
+    margin:0;
+}
+header nav ul li {
+    float: left;
+}
+header nav ul li a {
+    color: #151522;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/** For editing all posts **/
+.main {
+    float: left;
+    width: 100%;
+    padding: 64px 0;
+}
+.main .wrap {
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+.main .home-wrap {
+    float: left;
+    padding-right: 50%;
+    margin: 0;
+}
+.home-wrap span {
+    font-weight: 700;
+}
+
+.main a {
+    color: #4c8bec;
+    text-decoration: none;
+    border-bottom: 4px solid #40f9b838;
+    transition: 0.2s ease;
+}
+.main a:hover {
+    border-color: #40fbb9;
+}
+
+footer {
+    float:left;
+    width:100%;
+}

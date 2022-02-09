@@ -1,0 +1,112 @@
+body.smc {
+    font-family: Helvetica;
+    font-size: 16px;
+    background: #131313;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+body.smc a {
+    text-decoration: none;
+}
+@media (min-width: 480px) {
+    body.smc .container {
+        max-width: 480px;
+    }
+}
+body.smc .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+body.smc .main {
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+}
+body.smc .main .profile-img-container {
+    text-align: center;
+}
+.main .profile-img-container img {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.22);
+    box-shadow: 0 1px 40px 0 rgba(152,3,203,0.6);
+
+}
+body.smc .main .name {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 12px 0 0 0;
+    padding-bottom: 12px;
+    font-weight: bold;
+    border-bottom: 3px solid rgba(255,255,255,0.12);
+}
+body.smc .main .btn-cont {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+body.smc .main .btn {
+    float: left;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background: #fff;
+    color: #131313;
+    line-height: 60px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -1px;
+    position: relative;
+}
+body.smc .main .btn.btc {
+    background: #40FBB9;
+}
+body.smc .main .btn:before {
+    position: absolute;
+    content: "";
+}
+body.smc .main .btn.btc:before {
+    width: 29.5px;
+    height: 40.5px;
+    background: url("/img/icon-btc.png") no-repeat;
+    background-size: 29.5px 40.5px;
+    left: 19px;
+    top: 9px;
+}
+body.smc .main .btn.tg:before {
+    width: 36px;
+    height: 27px;
+    background: url("/img/icon-tg.png") no-repeat;
+    background-size: 36px 27px;
+    left: 15px;
+    top: 16px;
+}
+body.smc footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+body.smc footer small {
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.35;
+    color: #FFFEFF;
+    letter-spacing: 0;
+    text-align: center;
+}
+@media (max-width: 353px) {
+    body.smc .main .btn {
+        font-size: 16px;
+    }
+    body.smc .main .btn:before {
+        display: none;
+    }
+}

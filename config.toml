@@ -1,0 +1,61 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Marketing, Money, Madness'
+copyright = "Created by ::: One.Man.Army 👉🏼 Darquinius ©2006"
+enableRobotsTXT = true
+disableAliases = true
+
+[params]
+  disallow_search_engines = false # set robots.txt to disallow everything
+
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+  suffixes = [""]
+  delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+  mediatype = "text/netlify"
+  baseName = "_redirects"
+  isPlainText = true
+  notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+  mediatype = "text/netlify"
+  baseName = "_headers"
+  isPlainText = true
+  notAlternative = true
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'Archives'
+    url = '/archives/'
+    weight = 10
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 20
+
+[permalinks]
+  posts = "/:title"
+
+[markup]
+  [markup.highlight]
+      anchorLineNos = false
+      codeFences = true
+      guessSyntax = true
+      hl_Lines = ''
+      lineAnchors = ''
+      lineNoStart = 1
+      lineNos = false
+      lineNumbersInTable = false
+      noClasses = true
+      style = 'dracula'
+      tabWidth = 4

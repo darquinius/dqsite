@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    <head>
+
+        {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
+
+        <title>
+            {{ block "title" . }}{{- with .Title }}{{ . }} | Darquinius {{ end }}{{ end }}
+        </title>
+
+    </head>
+    <body class="{{ .Kind }} {{ .Type }}">
+
+        {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+
+        
+        {{ block "main" . }}{{ end }}
+
+        
+        {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+
+        {{ block "site/scripts" . }}
+            {{ partial "site/styles.html" . }}
+            {{ partial "site/scripts.html" . }}
+        {{ end }}
+
+    </body>
+</html>

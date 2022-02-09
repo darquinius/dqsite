@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+{{- $profile := resources.Get "img/darquinius.png" -}}
+{{ $profile := $profile.Resize "125x jpg q80" }}
+
+<section class="main">
+    <div class="container">
+        <div class="profile-img-container">
+            <img alt="{{ .Title }}" src="{{ $profile.RelPermalink }}" >
+        </div>
+        <div class="name">Darquinius Aka James </div>
+        <div class="btn-cont">
+            <a href="https://t.me/darquinius" target="_blank" class="btn tg">Connect On Telegram</a>
+            <a href="#" target="_blank" class="btn btc">Buy Me Lunch</a>
+        </div>
+    </div>
+</section>
+
+{{ end }}

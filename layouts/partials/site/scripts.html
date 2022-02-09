@@ -1,0 +1,8 @@
+{{ $jquery := resources.Get "js/jquery.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $page := resources.Get "js/page.js" }}
+
+<!-- Bundles all CSS together -->
+{{ $js := slice $jquery $main $page | resources.Concat "assets/js/scripts.js" | minify | fingerprint }}
+
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>

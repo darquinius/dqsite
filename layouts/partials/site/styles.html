@@ -1,0 +1,11 @@
+<!-- Puts Stylesheets into variables -->
+{{ $syntax := resources.Get "css/syntax.css" }}
+{{ $fonts := resources.Get "css/fonts.css" }}
+{{ $main := resources.Get "css/main.css" }}
+{{ $smc := resources.Get "css/smc.css" }}
+{{ $single := resources.Get "css/single.css" }}
+
+<!-- Bundles all CSS together -->
+{{ $style := slice $fonts $main $smc $single $syntax | resources.Concat "assets/css/style.css" | minify | fingerprint }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
