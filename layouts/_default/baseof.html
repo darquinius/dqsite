@@ -8,6 +8,10 @@
             {{ block "title" . }}{{- with .Title }}{{ . }} | Darquinius {{ end }}{{ end }}
         </title>
 
+        {{ block "site/styles" . }}
+            {{ partial "site/styles.html" . }}
+        {{ end }}
+
     </head>
     <body class="{{ .Kind }} {{ .Type }}">
 
@@ -20,7 +24,6 @@
         {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 
         {{ block "site/scripts" . }}
-            {{ partial "site/styles.html" . }}
             {{ partial "site/scripts.html" . }}
         {{ end }}
 
