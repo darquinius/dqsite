@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $('.home-wrap').append('<p>' + date + '</p>');
 
 
-    $.getJSON('http://crystalhoroscope.com/wp-content/themes/magic-quiz/content/dailyhoroscope/dhe.json');
+    $.getJSON('https://crystalhoroscope.com/wp-content/themes/magic-quiz/content/dailyhoroscope/dhe.json');
 
 
 });
