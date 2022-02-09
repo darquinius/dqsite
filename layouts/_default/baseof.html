@@ -4,9 +4,7 @@
 
         {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
 
-        <title>
-            {{ block "title" . }}{{- with .Title }}{{ . }} | Darquinius {{ end }}{{ end }}
-        </title>
+        <title>{{ block "title" . }}{{- with .Title }}{{ . }} | Darquinius {{ end }}{{ end }}</title>
 
         {{ block "site/styles" . }}
             {{ partial "site/styles.html" . }}
