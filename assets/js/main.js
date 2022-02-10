@@ -5,10 +5,28 @@ $( document ).ready(function() {
     var date = today.toISOString().slice(0, -14);
     console.log(date);
 
-    $('.home-wrap').append('<p>' + date + '</p>');
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", function () {
+
+        var data = JSON.parse(this.responseText);
+        var date = "2021-11-28";
+        var starsign = "Taurus";
+    
+        for (let entry of data) {
+
+            if (entry.tarort === date) {
+
+                $('.home-wrap').append('<p>' + entry[starsign] + '</p>');
+
+            }
+
+        }
 
 
-    $.getJSON('https://crystalhoroscope.com/wp-content/themes/magic-quiz/content/dailyhoroscope/dhe.json');
+    });
+    oReq.open("GET", "/json/dhe.json");
+    oReq.send();
 
 
 });
